@@ -4,12 +4,13 @@
   box-sizing: border-box;
 }
 
+/* Selector de etiqueta */
 body {
   background-color: rgb(112, 238, 238);
   font-family: sans-serif;
 }
 
-/* Step 2 (Jugar con la especificidad) */
+/* Step 2 (Jugar con la especificidad) - Selector de clase */ 
 .title {
   background-color: crimson;
   color: #fff;
@@ -18,7 +19,7 @@ body {
   padding: 10px;
 }
 
-/* Se aplican estos estilos debido a que la especificidad del id es mayor a la de clase. */
+/* Se aplican estos estilos debido a que la especificidad del id es mayor a la de clase. - Selector de ID */
 #title {
   background-color: blueviolet;
   color: chartreuse;
@@ -28,7 +29,9 @@ body {
 .about__me {
   color: #fff;
   height: 300px;
-  background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.500), rgba(0, 0, 0, 0.500)), url("../imgs/img_basket.jpg");
+  background-image: 
+    linear-gradient(90deg, rgba(255, 0, 0, 0.500),
+   rgba(0, 0, 0, 0.500)), url("../imgs/img_basket.jpg");
   background-position: center;
   background-size: cover;
   padding: 20px;
@@ -42,6 +45,8 @@ body {
 .about__me--description {
   margin: 1rem 0;
   line-height: 1.3;
+  width: 80%;
+  max-width: 600px;
 }
 
 .about__me--button {
@@ -68,6 +73,10 @@ body {
   padding: 50px;
   margin-top: 1rem;
   border: 5px ridge white;
+  /* Shadow */
+  box-shadow: 0 0 22px white inset,
+  0 0 32px red inset,
+  0 0 42px yellow inset;
 }
 
 /* Step 5 (Display y Position) */
@@ -83,6 +92,7 @@ body {
   gap: 1rem;
 }
 
+/* Selector de hijos directos */
 .display__position > div {
   height: 200px;
   width: 200px;
@@ -94,6 +104,7 @@ body {
   position: relative;
 }
 
+/* Selector combinado */
 .parent__relative div {
   background-color: white;
   width: max-content;
